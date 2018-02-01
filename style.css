@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.header-top{
+    background-color: #5f188a;
+    color: #fff;
+}
+
+.header-top .content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+.header-top .container-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-top .logo {
+    width: 128px;
+   /* background-color: rgba(0, 50, 172, 0.7); */
+}
+
+.header-top .content, .header-bottom .content{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header-top .item {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .icon {
+    width: 14px;
+    margin-right: 8px;
+}
+
+.header-top .content .mail{
+    margin-left: 25px;
+}
+
+.header-bottom {
+    background-color: #6a1b9a;
+}
+
+.header-bottom .content {
+    padding: 25px 0;
+}
+
+.slider {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .item{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(img/slider.png);
+    background-size: cover;
+    pointer-events: none;
+    transition: transform .5s;
+}
+
+.slider .item[data-slide="0"]{
+    background-image: url(img/slider0.jpg);
+}
+
+.slider .item.no-transition {
+    transition: none;
+}
+
+.slider .item.active{
+    pointer-events: all;
+}
+
+.slider .item.right {
+    transform: translateX(100%);
+}
+
+.slider .item.left {
+    transform: translateX(-100%);
+}
+
+
+.slider .container-arrow {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.slider .arrow {
+   width: 46px;
+   cursor: pointer;
+}
+
+.slider .arrow:hover{
+    color: #000;
+}
+
+#arrow-slider-left{
+    transform: rotate(180deg);
+}
